@@ -16,10 +16,9 @@ img {
 
 /*  || UTILITY CLASSES || */
 
-
-/* .nowrap {
-    white-space: nowrap;
-} */
+html {
+    scroll-behavior: smooth;
+}
 
  /*  || GENERAL STYLES ||  */
 
