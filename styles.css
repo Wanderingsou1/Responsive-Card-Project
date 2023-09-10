@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Roboto&display=swap');
+
+/*  || CSS RESET ||  */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/*  || UTILITY CLASSES || */
+
+
+/* .nowrap {
+    white-space: nowrap;
+} */
+
+ /*  || GENERAL STYLES ||  */
+
+ body {
+        font-family: 'Nunito', sans-serif, monospace;
+        font-size: 1rem;
+        min-height: 100vh;
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+ }
+
+ header, footer {
+    position: sticky;
+    background-color: rgb(49, 48, 51);
+    color: #fff;
+    text-align: center;
+}
+
+header, main, footer{
+    display: grid;
+    place-content: center;
+    grid-template-columns: 100%;
+    text-align: center;
+}
+
+header {
+    top: 0;
+}
+
+.navbar {
+    background-color: white;
+    border-bottom: 2px solid #000;
+    padding: 0.5rem 0;
+    font-weight: bolder;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    line-height: 1.5;
+}
+
+a:hover, a:focus, a:active {
+    text-decoration: underline;
+    color: #333333b6;
+}
+
+main {
+    background: radial-gradient(#eee, rgb(87, 85, 85));
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-grow: 1;
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: rgba(246, 246, 247, 0.538);
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.card-1 {
+    margin-top: 1.5rem;
+}
+
+.card:last-child {
+    margin-bottom: 1.5rem;
+}
+
+.image {
+    border: 3px solid gray;
+    border-radius: 50%;
+}
+
+footer {
+    bottom: 0;
+
+    display: grid;
+    grid-template-columns: 100%;
+    text-align: center;
+}
+
+
+
+/*  || SMALL || */
+
+@media screen and (min-width: 576px) {
+
+    /*  || NAVBAR || */
+
+    main {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card {
+        display: flex;
+        flex-flow: column wrap-reverse;
+    }
+
+    .card-1, .card-2 {
+        margin-top: 1.5rem;
+    }
+
+
+
+}
+
+@media screen and (min-width: 792px)
+{
+    .navbar {
+        display: none;
+    }
+
+    main {
+        display: flex;
+        flex-grow: 1;
+    }
+
+    .card-1, .card-2 {
+        margin-top: 0;
+    }
+
+    .card:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 1024px)
+{    
+    .navbar {
+        display: none;
+    }
+
+    .card-1 {
+        margin-top: 0;
+    }
+}
